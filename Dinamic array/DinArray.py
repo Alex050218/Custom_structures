@@ -18,3 +18,6 @@ class DinArray:
 
     def isEmpty(self):
         return self._capacity == 0
+
+    def get(self, index):
+        return self._array[index]
