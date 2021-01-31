@@ -12,3 +12,6 @@ class DinArray:
 
         for _ in range(capacity):
             self._array.append(None)
+
+    def size(self):
+        return self._capacity
