@@ -8,6 +8,9 @@ class DinArray:
         if capacity < 0:
             raise ValueError("Capacity must be 0 or more")
 
+        if not isinstance(data_type, object):
+            raise TypeError("Data type must be an object")
+
         self._data_type = data_type
         self._capacity = capacity
 
@@ -38,7 +41,7 @@ class DinArray:
 
             self._array[index] = val
         else:
-            raise TypeError(f"Data type of {val} different to array")
+            raise ValueError(f"Data type of {val} different to array")
 
     def get_type(self):
         return self._data_type
