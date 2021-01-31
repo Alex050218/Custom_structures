@@ -1,0 +1,51 @@
+REMEMBER: 
+  
+  - NOTHING CAN BE MUTATED: create a copy in the local 
+    scope and do your shit to it.
+
+  - DON´T BE DEPENDENT: It´s strictly forbidden to use
+    functions such as append or pop WHEN MANIPULATING THE ARRAY. 
+
+    Make your own ones and play around with them in within the class.
+
+neccesary functions to do here:
+
+  size() --> Get the total amount of fields that you can fill in
+  the array. For example, arr[19] will return 19.
+
+  isEmpty() --> Boolean value that checks wheter there is at least
+  one value stored in the array
+
+  get() --> Obtain values by introducing specified index
+
+  set() --> Introduce a value in the array by giving an index.
+
+  clear() --> Set all values in the array to Null
+
+  add() --> append the element to the final of the list. 
+    - If the capacity is not enough, double the size
+      and copy the array to the extended one.
+
+  removeAt() --> Give an index and delete the data within and 
+    reduce the capacity of items which can be stored in by one.
+
+  remove() --> same as removeAt but pass the object , such 
+    as a number, and delete the first instance in the array. 
+    -Return True if the value was completely destroyed, 
+    otherwise false.
+
+  indexOf() --> Pass the object and return its numerical 
+  position in the array.
+
+  contains() --> Pass the object and return true if exists within
+  the array, otherwise false.
+
+  iterator() --> Create a function that allows iteration. It depends
+  on your language how you do so.
+
+  toString() --> Convert your weird looking array into something nice
+  as this:
+
+    val1, val2, valN ...
+
+  and return it as a string.
