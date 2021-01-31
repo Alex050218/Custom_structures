@@ -21,3 +21,9 @@ class DinArray:
 
     def get(self, index):
         return self._array[index]
+
+    def set(self, val, index):
+        if isinstance(val, self._data_type):
+            self._array[index]
+        else:
+            raise TypeError(f"Data type of {val} different to array")
