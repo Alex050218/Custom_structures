@@ -15,3 +15,6 @@ class DinArray:
 
     def size(self):
         return self._capacity
+
+    def isEmpty(self):
+        return self._capacity == 0
