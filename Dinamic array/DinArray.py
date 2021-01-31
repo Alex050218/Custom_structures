@@ -13,10 +13,10 @@ class DinArray:
         for _ in range(capacity):
             self._array.append(None)
 
-    def size(self):
+    def capacity(self):
         return self._capacity
 
-    def isEmpty(self):
+    def is_empty(self):
         return self.size() == 0
 
     def get(self, index):
@@ -28,7 +28,7 @@ class DinArray:
         else:
             raise TypeError(f"Data type of {val} different to array")
 
-    def getType(self):
+    def get_type(self):
         return self._data_type
 
     def clear(self):

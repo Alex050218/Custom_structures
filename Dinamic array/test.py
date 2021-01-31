@@ -3,14 +3,11 @@ from DinArray import DinArray
 array = DinArray(capacity=5, data_type=bool)
 
 info = f"""\
-Created array of capacity {array.size()}
-Data type {array.getType()} \n"""
+Created array of capacity {array.capacity()}
+Data type {array.get_type()} \n"""
 print(info)
 
-values = f"""\
-is it Empty? {"Yes" if array.isEmpty() == 0 else "No"}
-Value at index 4: {array.get(4)} \n"""
-print(values)
+print(f'is it Empty? {"Yes" if array.is_empty() == 0 else "No"}')
 
 array.set(True, 0)
 print("New value 'True' at index 0 \n")
