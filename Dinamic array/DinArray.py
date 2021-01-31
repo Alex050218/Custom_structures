@@ -1,7 +1,8 @@
 class DinArray:
     _array = []
-    _capacity = 0
     _data_type = None
+    _capacity = 0
+    _len = 0
 
     def __init__(self, capacity, data_type):
         if capacity < 0:
@@ -16,13 +17,21 @@ class DinArray:
     def capacity(self):
         return self._capacity
 
+    def get_len(self):
+        real_len = 0
+        for val in self._array:
+            if val is not None:
+                real_len += 1
+
+        return real_len
+
     def is_empty(self):
-        return self.size() == 0
+        return self.get_len() == 0
 
     def get(self, index):
         return self._array[index]
 
-    def set(self, val, index):
+    def set_at(self, val, index):
         if isinstance(val, self._data_type):
             self._array[index] = val
         else:
