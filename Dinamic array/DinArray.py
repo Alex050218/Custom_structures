@@ -4,8 +4,8 @@ class DinArray:
     _data_type = None
 
     def __init__(self, capacity, data_type):
-        if capacity <= 0:
-            raise ValueError("Capacity must be 1 or more")
+        if capacity < 0:
+            raise ValueError("Capacity must be 0 or more")
 
         self._data_type = data_type
         self._capacity = capacity
@@ -17,7 +17,7 @@ class DinArray:
         return self._capacity
 
     def isEmpty(self):
-        return self._capacity == 0
+        return self.size() == 0
 
     def get(self, index):
         return self._array[index]
@@ -32,7 +32,5 @@ class DinArray:
         return self._data_type
 
     def clear(self):
-        curr_ind = 0
-        while curr_ind < self._capacity:
-            self._array[curr_ind] = None
-            curr_ind += 1
+        self._array = []
+        self._capacity = 0
