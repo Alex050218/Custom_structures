@@ -31,8 +31,11 @@ class DinArray:
     def get(self, index):
         return self._array[index]
 
-    def set_at(self, val, index):
+    def set_at(self, index, val):
         if isinstance(val, self._data_type):
+            if self._array[index] is None:
+                self._len += 1
+
             self._array[index] = val
         else:
             raise TypeError(f"Data type of {val} different to array")
