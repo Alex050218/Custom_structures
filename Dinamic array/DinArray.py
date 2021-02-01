@@ -73,18 +73,6 @@ class DinArray:
 
         return str_array
 
-    def __iter__(self):
-        self._curr_index = 0
-        return self
-
-    def __next__(self):
-        if self._curr_index < self._capacity:
-            curr_val = self._array[self._curr_index]
-            self._curr_index += 1
-            return curr_val
-        else:
-            raise StopIteration
-
     def contains(self, search_val):
         if not isinstance(search_val, self._data_type):
             raise ValueError(f"Value '{search_val}' is not a primitive data_type")
@@ -109,3 +97,15 @@ class DinArray:
 
     def __repr__(self):
         return self.get_string()
+
+    def __iter__(self):
+        self._curr_index = 0
+        return self
+
+    def __next__(self):
+        if self._curr_index < self._capacity:
+            curr_val = self._array[self._curr_index]
+            self._curr_index += 1
+            return curr_val
+        else:
+            raise StopIteration
