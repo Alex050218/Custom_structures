@@ -27,7 +27,7 @@ neccesary functions to do here:
       and copy the array to the extended one.
 
   removeAt() --> Give an index and delete the data within and 
-    reduce the capacity of items which can be stored in by one.
+    reduce the capacity of items which can be stored in by one. DONE
 
   remove() --> same as removeAt but pass the object , such 
     as a number, and delete the first instance in the array. 
