@@ -11,16 +11,16 @@ REMEMBER:
 neccesary functions to do here:
 
   size() --> Get the total amount of fields that you can fill in
-  the array. For example, arr[19] will return 19.
+  the array. For example, arr[19] will return 19. DONE
 
   isEmpty() --> Boolean value that checks wheter there is at least
-  one value stored in the array
+  one value stored in the array DONE
 
-  get() --> Obtain values by introducing specified index
+  get() --> Obtain values by introducing specified index. DONE
 
-  set() --> Introduce a value in the array by giving an index.
+  set() --> Introduce a value in the array by giving an index. DONE
 
-  clear() --> Set all values in the array to Null
+  clear() --> Set all values in the array to Null DONE
 
   add() --> append the element to the final of the list. 
     - If the capacity is not enough, double the size
