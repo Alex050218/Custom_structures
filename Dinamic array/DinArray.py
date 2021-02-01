@@ -8,14 +8,22 @@ class DinArray:
         if capacity < 0:
             raise ValueError("Capacity must be 0 or more")
 
-        if not isinstance(data_type, object):
-            raise TypeError("Data type must be an object")
+        if data_type not in [str, bool, float, int]:
+            raise TypeError("Data type must be a primitive data type")
 
         self._data_type = data_type
         self._capacity = capacity
+        default_val = None
 
-        for _ in range(capacity):
-            self._array.append(None)
+        if data_type in [float, int]:
+            default_val = 0
+        elif data_type is bool:
+            default_val = False
+        else:
+            default_val = ""
+
+        for _ in capacity(capacity):
+            self._array.append(default_val)
 
     def capacity(self):
         return self._capacity
@@ -33,8 +41,8 @@ class DinArray:
         if not isinstance(val, self._data_type):
             raise ValueError(f"Data type of {val} different to array")
 
-        if self._array[index] is None:
-            self._len += 1
+        if val is None:
+            raise ValueError("None values can´t be set at array manually")
 
         self._array[index] = val
 
