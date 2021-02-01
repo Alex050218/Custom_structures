@@ -1,6 +1,7 @@
 class DinArray:
     _array = []
     _data_type = None
+    _default_val = None
     _capacity = 0
     _len = 0
 
@@ -13,17 +14,16 @@ class DinArray:
 
         self._data_type = data_type
         self._capacity = capacity
-        self._default_val = None
 
         if data_type in [float, int]:
-            default_val = 0
+            self._default_val = 0
         elif data_type is bool:
-            default_val = False
+            self._default_val = False
         else:
-            default_val = ""
+            self._default_val = ""
 
         for _ in range(capacity):
-            self._array.append(default_val)
+            self._array.append(self._default_val)
 
     def capacity(self):
         return self._capacity
