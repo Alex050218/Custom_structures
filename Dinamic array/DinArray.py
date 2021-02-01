@@ -35,17 +35,20 @@ class DinArray:
         return self._array[index]
 
     def set_at(self, index, val):
-        if isinstance(val, self._data_type):
-            if self._array[index] is None:
-                self._len += 1
-
-            self._array[index] = val
-        else:
+        if not isinstance(val, self._data_type):
             raise ValueError(f"Data type of {val} different to array")
+
+        if self._array[index] is None:
+            self._len += 1
+
+        self._array[index] = val
 
     def get_type(self):
         return self._data_type
 
     def clear(self):
         self._array = []
-        self._capacity = 0
+        for _ in range(self.capacity()):
+            self._array.append(None)
+
+        self._len = 0
