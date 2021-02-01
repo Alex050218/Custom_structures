@@ -32,7 +32,7 @@ class DinArray:
 
     def set_at(self, index, val):
         if not isinstance(val, self._data_type):
-            raise ValueError(f"Data type of {val} different to array")
+            raise TypeError(f"Data type of {val} different to array")
 
         if val is None:
             raise ValueError("None values can´t be set at array manually")
@@ -67,7 +67,7 @@ class DinArray:
 
     def contains(self, search_val):
         if not isinstance(search_val, self._data_type):
-            raise ValueError(f"Value '{search_val}' is not a primitive data_type")
+            raise TypeError(f"Value '{search_val}' is not a primitive data_type")
 
         for array_val in self._array:
             if array_val == search_val:
@@ -78,7 +78,7 @@ class DinArray:
     def index_of(self, search_obj):
         if not isinstance(search_obj, self._data_type):
             if search_obj is not None:
-                raise ValueError(f"'{search_obj}' is not a legal value")
+                raise TypeError(f"'{search_obj}' is not a legal value")
 
         current_index = 0
         while current_index < self._capacity:
