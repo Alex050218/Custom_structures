@@ -44,6 +44,9 @@ class DinArray:
         if val is None:
             raise ValueError("None values can´t be set at array manually")
 
+        if self._array[index] is not val:
+            self._len += 1
+
         self._array[index] = val
 
     def get_type(self):

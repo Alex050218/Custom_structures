@@ -12,7 +12,7 @@ print(f'is it Empty? {"Yes" if array.is_empty() else "No"} \n')
 array.set_at(4, True)
 print("New value 'True' at index 0 \n")
 
-print(f"Amount of values introduced into the array: {array.get_len()}")
+print(f"Amount of values introduced into the array by the user: {array.get_len()}\n")
 
 array.clear()
-print("All values deleted from the array and size set to 0")
+print("All values deleted from the array and size set to its respective default value")
