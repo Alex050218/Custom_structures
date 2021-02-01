@@ -13,7 +13,7 @@ class DinArray:
 
         self._data_type = data_type
         self._capacity = capacity
-        default_val = None
+        self._default_val = None
 
         if data_type in [float, int]:
             default_val = 0
@@ -22,7 +22,7 @@ class DinArray:
         else:
             default_val = ""
 
-        for _ in capacity(capacity):
+        for _ in range(capacity):
             self._array.append(default_val)
 
     def capacity(self):
@@ -32,7 +32,7 @@ class DinArray:
         return self._len
 
     def is_empty(self):
-        return self.get_len() == 0
+        return self._len == 0
 
     def get(self, index):
         return self._array[index]
@@ -52,6 +52,6 @@ class DinArray:
     def clear(self):
         self._array = []
         for _ in range(self.capacity()):
-            self._array.append(None)
+            self._array.append(self._default_val)
 
         self._len = 0
