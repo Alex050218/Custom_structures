@@ -16,11 +16,15 @@ print(f"Amount of values introduced into the array by the user: {array.get_len()
 
 print(f"String of the created array: {array.get_string()} \n")
 
-print("Iteration of all values in the array: ")
+print("Iteration of all values in the array:")
 for val in iter(array):
     print(f"\t {val}")
 
-print("\nRepresentation of the array :", array, "\n")
+print("Representation of the array :", array, "\n")
+
+print(
+    f"is within the array a true value?: {'Yes' if array.contains(True) else 'No'} \n"
+)
 
 array.clear()
 print("All values deleted from the array and size set to its respective default value")

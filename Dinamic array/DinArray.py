@@ -85,5 +85,15 @@ class DinArray:
         else:
             raise StopIteration
 
+    def contains(self, search_val):
+        if not isinstance(search_val, self._data_type):
+            raise ValueError(f"Value '{search_val}' is not a primitive data_type")
+
+        for array_val in self._array:
+            if array_val == search_val:
+                return True
+
+        return False
+
     def __repr__(self):
         return self.get_string()
