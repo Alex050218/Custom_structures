@@ -26,5 +26,7 @@ print(
     f"is within the array a true value?: {'Yes' if array.contains(True) else 'No'} \n"
 )
 
+print(f"The index of true is: {array.index_of(True)} \n")
+
 array.clear()
 print("All values deleted from the array and size set to its respective default value")

@@ -35,10 +35,10 @@ neccesary functions to do here:
     otherwise false.
 
   indexOf() --> Pass the object and return its numerical 
-  position in the array.
+  position in the array. DONE
 
   contains() --> Pass the object and return true if exists within
-  the array, otherwise false.
+  the array, otherwise false. DONE
 
   iterator() --> Create a function that allows iteration. It depends
   on your language how you do so. DONE

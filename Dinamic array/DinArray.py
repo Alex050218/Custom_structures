@@ -95,5 +95,17 @@ class DinArray:
 
         return False
 
+    def index_of(self, search_obj):
+        if not isinstance(search_obj, self._data_type):
+            raise ValueError(f"'{search_obj}' is not a primitive value")
+
+        current_index = 0
+        while current_index < self._capacity:
+            if self._array[current_index] == search_obj:
+                return current_index
+            current_index += 1
+
+        return -1
+
     def __repr__(self):
         return self.get_string()
