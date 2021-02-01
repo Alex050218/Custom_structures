@@ -58,3 +58,16 @@ class DinArray:
             self._array.append(self._default_val)
 
         self._len = 0
+
+    def get_string(self):
+        if self._len == 0:
+            return "[]"
+
+        str_array = "["
+        for index in range(self._capacity - 1):
+            str_array += f"{str(self._array[index])}, "
+
+        final_index = index + 1
+        str_array += f"{self._array[final_index]}]"
+        
+        return str_array
