@@ -4,6 +4,7 @@ class DinArray:
     _default_val = None
     _capacity = 0
     _len = 0
+    _curr_index = 0
 
     def __init__(self, capacity, data_type):
         if capacity < 0:
@@ -69,5 +70,17 @@ class DinArray:
 
         final_index = index + 1
         str_array += f"{self._array[final_index]}]"
-        
+
         return str_array
+
+    def __iter__(self):
+        self._curr_index = 0
+        return self
+
+    def __next__(self):
+        if self._curr_index < self._capacity:
+            curr_val = self._array[self._curr_index]
+            self._curr_index += 1
+            return curr_val
+        else:
+            raise StopIteration

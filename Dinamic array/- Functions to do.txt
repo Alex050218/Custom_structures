@@ -48,4 +48,4 @@ neccesary functions to do here:
 
     val1, val2, valN ...
 
-  and return it as a string.
+  and return it as a string. DONE
