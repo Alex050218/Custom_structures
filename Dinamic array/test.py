@@ -16,8 +16,11 @@ print(f"Amount of values introduced into the array by the user: {array.get_len()
 
 print(f"String of the created array: {array.get_string()} \n")
 
+print("Iteration of all values in the array: ")
 for val in iter(array):
-    print(val)
+    print(f"\t {val}")
+
+print("\nRepresentation of the array :", array, "\n")
 
 array.clear()
 print("All values deleted from the array and size set to its respective default value")

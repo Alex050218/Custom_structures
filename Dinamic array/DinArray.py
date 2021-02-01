@@ -84,3 +84,6 @@ class DinArray:
             return curr_val
         else:
             raise StopIteration
+
+    def __repr__(self):
+        return self.get_string()

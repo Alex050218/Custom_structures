@@ -41,7 +41,7 @@ neccesary functions to do here:
   the array, otherwise false.
 
   iterator() --> Create a function that allows iteration. It depends
-  on your language how you do so.
+  on your language how you do so. DONE
 
   toString() --> Convert your weird looking array into something nice
   as this:
