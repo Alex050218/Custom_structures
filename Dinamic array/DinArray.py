@@ -108,6 +108,15 @@ class DinArray:
         self._array = new_array
         self._capacity -= 1
 
+    def remove(self, delete_obj):
+        delete_index = self.index_of(delete_obj)
+
+        if delete_index == -1:
+            return False
+
+        self.remove_at(delete_index)
+        return True
+
     def __repr__(self):
         return self.get_string()
 
