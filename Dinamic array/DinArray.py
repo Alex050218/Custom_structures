@@ -21,12 +21,7 @@ class DinArray:
         return self._capacity
 
     def get_len(self):
-        real_len = 0
-        for val in self._array:
-            if val is not None:
-                real_len += 1
-
-        return real_len
+        return self._len
 
     def is_empty(self):
         return self.get_len() == 0
