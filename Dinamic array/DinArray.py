@@ -1,7 +1,6 @@
 class DinArray:
     _array = []
     _data_type = None
-    _default_val = None
     _capacity = 0
     _len = 0
     _curr_index = 0
@@ -10,21 +9,14 @@ class DinArray:
         if capacity < 0:
             raise ValueError("Capacity must be 0 or more")
 
-        if data_type not in [str, bool, float, int]:
-            raise TypeError("Data type must be a primitive data type")
+        if not isinstance(data_type, object):
+            raise TypeError("Data type must be an storable object")
 
         self._data_type = data_type
         self._capacity = capacity
 
-        if data_type in [float, int]:
-            self._default_val = 0
-        elif data_type is bool:
-            self._default_val = False
-        else:
-            self._default_val = ""
-
         for _ in range(capacity):
-            self._array.append(self._default_val)
+            self._array.append(None)
 
     def capacity(self):
         return self._capacity
@@ -56,12 +48,12 @@ class DinArray:
     def clear(self):
         self._array = []
         for _ in range(self.capacity()):
-            self._array.append(self._default_val)
+            self._array.append(None)
 
         self._len = 0
 
     def get_string(self):
-        if self._len == 0:
+        if self._len == 0 and self.index_of(None) == -1:
             return "[]"
 
         str_array = "["
@@ -85,7 +77,8 @@ class DinArray:
 
     def index_of(self, search_obj):
         if not isinstance(search_obj, self._data_type):
-            raise ValueError(f"'{search_obj}' is not a primitive value")
+            if search_obj is not None:
+                raise ValueError(f"'{search_obj}' is not a legal value")
 
         current_index = 0
         while current_index < self._capacity:
@@ -94,6 +87,26 @@ class DinArray:
             current_index += 1
 
         return -1
+
+    def remove_at(self, search_index):
+        if search_index < 0 or search_index >= self._capacity:
+            raise ValueError(f"{search_index} is not an index in the array")
+
+        new_array = []
+
+        curr_index = 0
+        while curr_index < self._capacity:
+            curr_value = self._array[curr_index]
+
+            if curr_index == search_index:
+                self._len -= 1 if self._len != 0 else 0
+            else:
+                new_array.append(curr_value)
+
+            curr_index += 1
+
+        self._array = new_array
+        self._capacity -= 1
 
     def __repr__(self):
         return self.get_string()

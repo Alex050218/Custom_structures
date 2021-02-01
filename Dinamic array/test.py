@@ -28,5 +28,14 @@ print(
 
 print(f"The index of true is: {array.index_of(True)} \n")
 
+print("Removing true from the array...")
+array.remove_at(4)
+print(
+    f"""
+    New array: {array.get_string()}
+    New capacity: {array.capacity()}
+    New lenght: {array.get_len()}"""
+)
+
 array.clear()
 print("All values deleted from the array and size set to its respective default value")
