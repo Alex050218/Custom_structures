@@ -1,8 +1,8 @@
-from DinArray import DinArray
+from DinArray import DinamicArray
 
 
 def status_array(ar):
-    if not isinstance(ar, DinArray):
+    if not isinstance(ar, DinamicArray):
         raise TypeError("Not a dinamic array")
 
     print(
@@ -13,7 +13,7 @@ def status_array(ar):
     )
 
 
-array = DinArray(capacity=5, data_type=bool)
+array = DinamicArray(capacity=5, data_type=bool)
 
 print(
     f"""\
@@ -56,6 +56,22 @@ status_array(array)
 print("Removing the first instance of 'None'...")
 array.remove(None)
 status_array(array)
+
+print("Adding a false value to the array to an existing empty array")
+array.add_val(False)
+status_array(array)
+
+full_array = DinamicArray(capacity=3, data_type=bool)
+
+for _ in range(full_array.capacity()):
+    full_array.add_val(True)
+
+print("Array before adding new value")
+status_array(full_array)
+
+full_array.add_val(False)
+print("Array after the new value being inserted")
+status_array(full_array)
 
 array.clear()
 print("All values deleted from the array and size set to its respective default value")

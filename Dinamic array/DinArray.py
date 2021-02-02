@@ -1,4 +1,4 @@
-class DinArray:
+class DinamicArray:
     _array = []
     _data_type = None
     _capacity = 0
@@ -17,6 +17,29 @@ class DinArray:
 
         for _ in range(capacity):
             self._array.append(None)
+
+    def add_val(self, new_val):
+        if not self.is_type(new_val):
+            raise TypeError(f"Data type of {new_val} don´t match array´s one")
+
+        new_index = self._len
+
+        if new_index >= self._capacity:
+            if self._capacity != 0:
+                self._capacity *= 2
+            else:
+                self._capacity = 1
+
+            new_array = []
+            for index in range(self._capacity):
+                if index < self._len:
+                    new_array.append(self._array[index])
+                else:
+                    new_array.append(None)
+            self._array = new_array
+
+        self._len += 1 if self._array[new_index] is None else 0
+        self._array[new_index] = new_val
 
     def capacity(self):
         return self._capacity
@@ -67,7 +90,7 @@ class DinArray:
 
     def contains(self, search_val):
         if not self.is_type(search_val):
-            raise TypeError(f"Value '{search_val}' is not a primitive data_type")
+            raise TypeError(f"Data type of {search_val} doesn´t match array´s one")
 
         for array_val in self._array:
             if array_val == search_val:
@@ -90,9 +113,10 @@ class DinArray:
 
     def remove_at(self, search_index):
         if search_index < 0 or search_index >= self._capacity:
-            raise ValueError(f"{search_index} is not an index in the array")
+            raise IndexError(f"{search_index} is not an index in the array")
 
         new_array = []
+        self._len -= 0 if self._array[search_index] is None else 1
 
         curr_index = 0
         while curr_index < self._capacity:
