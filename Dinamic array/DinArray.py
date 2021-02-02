@@ -31,7 +31,7 @@ class DinArray:
         return self._array[index]
 
     def set_at(self, index, val):
-        if not isinstance(val, self._data_type):
+        if not self.is_type(val):
             raise TypeError(f"Data type of {val} different to array")
 
         if val is None:
@@ -66,7 +66,7 @@ class DinArray:
         return str_array
 
     def contains(self, search_val):
-        if not isinstance(search_val, self._data_type):
+        if not self.is_type(search_val):
             raise TypeError(f"Value '{search_val}' is not a primitive data_type")
 
         for array_val in self._array:
@@ -76,7 +76,7 @@ class DinArray:
         return False
 
     def index_of(self, search_obj):
-        if not isinstance(search_obj, self._data_type):
+        if not self.is_type(search_obj):
             if search_obj is not None:
                 raise TypeError(f"'{search_obj}' is not a legal value")
 
@@ -116,6 +116,9 @@ class DinArray:
 
         self.remove_at(delete_index)
         return True
+
+    def is_type(self, val):
+        return isinstance(val, self._data_type)
 
     def __repr__(self):
         return self.get_string()
