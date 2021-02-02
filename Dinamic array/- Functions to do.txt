@@ -32,7 +32,7 @@ neccesary functions to do here:
   remove() --> same as removeAt but pass the object , such 
     as a number, and delete the first instance in the array. 
     -Return True if the value was completely destroyed, 
-    otherwise false.
+    otherwise false. DONE
 
   indexOf() --> Pass the object and return its numerical 
   position in the array. DONE
