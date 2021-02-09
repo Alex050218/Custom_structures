@@ -14,6 +14,8 @@ Things and necessary things that will make this list work:
     AtBeggining() -> It will place a new node in the first element of 
     the list.
 
+    Insert() -> Pass a node and append it into the list at the end of it
+
     InsertAt() -> The new node will be created between a node and 
     another one changing the reference and therefore the list order 
     itself.
