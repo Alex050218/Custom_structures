@@ -19,6 +19,9 @@ class LinkList:
         self._head = NewNode
         self._lenght += 1
 
+    def Lenght(self):
+        return self._lenght
+
     def _check_node(self, node):
         if not isinstance(node, Node):
             raise ValueError("The introduced value is not a node")
