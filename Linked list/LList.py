@@ -7,11 +7,17 @@ class Node:
 class LinkList:
     _lenght = 1
     _head = None
-    _tail = None
 
     def __init__(self, firstNode):
         self._check_node(firstNode)
         self._head = firstNode
+
+    def AtBeggining(self, NewNode):
+        self._check_node(NewNode)
+
+        NewNode.next = self._head
+        self._head = NewNode
+        self._lenght += 1
 
     def _check_node(self, node):
         if not isinstance(node, Node):
