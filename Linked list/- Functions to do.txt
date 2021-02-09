@@ -3,16 +3,16 @@ Things and necessary things that will make this list work:
   Class node -> Piece of the linked list that will have the values
   that will be stored in the list. It has two properties:
   
-    data = It will have the object that is going to be stored
+    data = It will have the object that is going to be stored. CREATED
 
     next = The reference to the value next to the data stored in
-    the node.
+    the node. CREATED
 
   Class LinkedList -> Main class that will store the nodes of created
   from the class node, its functions are going to be:
 
     AtBeggining() -> It will place a new node in the first element of 
-    the list.
+    the list. CREATED
 
     Insert() -> Pass a node and append it into the list at the end of it
 
@@ -27,7 +27,7 @@ Things and necessary things that will make this list work:
     stored within the specified node. return none if not found.
 
     getLength() -> return an integer of the node amount that is stored in
-    the list.
+    the list. CREATED
 
     remove() -> Introduce an object and it will remove its first instance.
     Return false if not deleted, true otherwise.
@@ -35,6 +35,6 @@ Things and necessary things that will make this list work:
     removeAt() -> Introduce an integer number and it will delete the node at
     the specified index. Return true if found, false otherwise.
 
-    getString() -> Return a representation of the list within a string.
+    getString() -> Return a representation of the list within a string. CREATED
 
     Also create an interator of nodes stored in the linked list
