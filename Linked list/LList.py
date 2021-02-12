@@ -19,6 +19,18 @@ class LinkList:
         NewNode.next = self._head
         self._head = NewNode
 
+    def AtEnd(self, NewNode):
+        self._check_node(NewNode)
+        self._lenght += 1
+
+        curr_node = self._head
+        while curr_node is not None:
+            if curr_node.next is None:
+                break
+            curr_node = curr_node.next
+
+        curr_node.next = NewNode
+
     def Lenght(self):
         return self._lenght
 
