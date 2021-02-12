@@ -26,10 +26,9 @@ class LinkList:
         curr_node = self._head
         while curr_node is not None:
             if curr_node.next is None:
+                curr_node.next = NewNode
                 break
             curr_node = curr_node.next
-
-        curr_node.next = NewNode
 
     def Lenght(self):
         return self._lenght
