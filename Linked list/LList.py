@@ -41,11 +41,11 @@ class LinkList:
         while cur_node is not None:
             if cur_node.next is not None:
                 string += f"{cur_node.data} -> "
-                cur_node = cur_node.next
             else:
-                break
+                string += f"{cur_node.data}"
 
-        string += f"{cur_node.data}"
+            cur_node = cur_node.next
+
         return string
 
     def __repr__(self):
