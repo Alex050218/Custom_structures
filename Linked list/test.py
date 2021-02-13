@@ -1,6 +1,6 @@
 from LList import LinkList, Node
 
-Llist = LinkList(Node(5))
+Llist = LinkList()
 
 for val in range(1, 10, 2):
     Llist.AtBeggining(Node(val))

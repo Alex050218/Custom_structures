@@ -5,12 +5,9 @@ class Node:
 
 
 class LinkList:
-    _lenght = 1
-    _head = None
-
-    def __init__(self, firstNode):
-        self._check_node(firstNode)
-        self._head = firstNode
+    def __init__(self):
+        self._lenght = 0
+        self._head = None
 
     def AtBeggining(self, NewNode):
         self._check_node(NewNode)
