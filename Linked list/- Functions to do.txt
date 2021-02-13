@@ -18,7 +18,7 @@ Things and necessary things that will make this list work:
 
     InsertAt() -> The new node will be created between a node and 
     another one changing the reference and therefore the list order 
-    itself.
+    itself. CREATED
 
     get() -> Introduce a value and will return the index of the specified
     data. If not found, return none.

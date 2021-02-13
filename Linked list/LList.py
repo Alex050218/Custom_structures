@@ -28,10 +28,8 @@ class LinkList:
             curr_node = curr_node.next
 
     def InsertAt(self, index, NewNode):
-        if not index >= 0 and index < self._lenght:
-            raise IndexError
-
         self._check_node(NewNode)
+        self._check_index(index)
 
         if index == 0:
             self.AtBeggining(NewNode)
@@ -44,6 +42,8 @@ class LinkList:
 
         NewNode.next = curr_node
         prev_node.next = NewNode
+
+        self._lenght += 1
 
     def Lenght(self):
         return self._lenght
@@ -68,3 +68,7 @@ class LinkList:
     def _check_node(self, node):
         if not isinstance(node, Node):
             raise ValueError("The introduced value is not a node")
+
+    def _check_index(self, new_index):
+        if not new_index >= 0 and new_index < self._lenght:
+            raise IndexError
