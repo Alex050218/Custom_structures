@@ -27,6 +27,24 @@ class LinkList:
                 break
             curr_node = curr_node.next
 
+    def InsertAt(self, index, NewNode):
+        if not index >= 0 and index < self._lenght:
+            raise IndexError
+
+        self._check_node(NewNode)
+
+        if index == 0:
+            self.AtBeggining(NewNode)
+            return
+
+        curr_node = self._head
+        for _ in range(index):
+            prev_node = curr_node
+            curr_node = curr_node.next
+
+        NewNode.next = curr_node
+        prev_node.next = NewNode
+
     def Lenght(self):
         return self._lenght
 
