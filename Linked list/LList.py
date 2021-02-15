@@ -45,6 +45,16 @@ class LinkList:
 
         self._lenght += 1
 
+    def removeAt(self, index):
+        self._check_index(index)
+
+        if index == 0:
+            old_head = self._head
+            self._head = old_head.next
+            
+            del old_head
+            return
+
     def Lenght(self):
         return self._lenght
 

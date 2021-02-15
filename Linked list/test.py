@@ -10,3 +10,6 @@ print("New Linked List: ", Llist)
 
 Llist.InsertAt(4, Node(2))
 print("Insertion at index 4: ", Llist)
+
+Llist.removeAt(0)
+print("First value deleted: ", Llist)
