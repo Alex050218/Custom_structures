@@ -72,6 +72,7 @@ class LinkList:
         index_node = self.get_index(node)
         if index_node != -1:
             self.removeAt(index_node)
+            self._reduce_lenght()
         else:
             return -1
 
