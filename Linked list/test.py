@@ -23,3 +23,6 @@ print(f"Index of {search_node.data}: ", Llist.get_index(search_node))
 
 Llist.remove_node(Node(2))
 print("First occurrence of 2 deleted: ", Llist)
+
+index = 3
+print(f"Data at index {index}: ", Llist.get_data(index))

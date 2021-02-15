@@ -24,7 +24,7 @@ hings and necessary things that will make this list work:
     data. If not found, return none. CREATED
 
     getAt() -> Introduce an integer number and it will return the value
-    stored within the specified node. return none if not found.
+    stored within the specified node. return none if not found. CREATED
 
     getLength() -> return an integer of the node amount that is stored in
     the list. CREATED
