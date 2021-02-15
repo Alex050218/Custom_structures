@@ -66,6 +66,15 @@ class LinkList:
         else:
             prev_node.next = old_node.next
 
+    def remove_node(self, node):
+        self._check_node(node)
+
+        index_node = self.get_index(node)
+        if index_node != -1:
+            self.removeAt(index_node)
+        else:
+            return -1
+
     def Lenght(self):
         return self._lenght
 

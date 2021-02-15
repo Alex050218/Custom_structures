@@ -16,7 +16,10 @@ print("First value deleted: ", Llist)
 
 old_index = 4
 Llist.removeAt(old_index)
-print(f"Deletion at index {old_index}:", Llist)
+print(f"Deletion at index {old_index}: ", Llist)
 
 search_node = Node(2)
 print(f"Index of {search_node.data}: ", Llist.get_index(search_node))
+
+Llist.remove_node(Node(2))
+print("First occurrence of 2 deleted: ", Llist)

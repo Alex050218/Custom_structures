@@ -30,7 +30,7 @@ hings and necessary things that will make this list work:
     the list. CREATED
 
     remove() -> Introduce an object and it will remove its first instance.
-    Return false if not deleted, true otherwise.
+    Return false if not deleted, true otherwise. CREATED
 
     removeAt() -> Introduce an integer number and it will delete the node at
     the specified index. Return true if found, false otherwise. CREATED
