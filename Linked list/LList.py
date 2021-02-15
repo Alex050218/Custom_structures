@@ -5,9 +5,15 @@ class Node:
 
 
 class LinkList:
-    def __init__(self):
-        self._lenght = 0
-        self._head = None
+    _lenght = 0
+    _head = None
+    _curr_node = None
+
+    def __init__(self, new_head=None):
+        if new_head is not None:
+            self._check_node(new_head)
+            self._head = new_head
+            self._lenght += 1
 
     def AtBeggining(self, NewNode):
         self._check_node(NewNode)
@@ -72,7 +78,6 @@ class LinkList:
         index_node = self.get_index(node)
         if index_node != -1:
             self.removeAt(index_node)
-            self._reduce_lenght()
         else:
             return -1
 

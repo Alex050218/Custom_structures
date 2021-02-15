@@ -1,6 +1,6 @@
 from LList import LinkList, Node
 
-Llist = LinkList()
+Llist = LinkList(Node(6))
 
 for val in range(1, 10, 2):
     Llist.AtBeggining(Node(val))
@@ -23,6 +23,8 @@ print(f"Index of {search_node.data}: ", Llist.get_index(search_node))
 
 Llist.remove_node(Node(2))
 print("First occurrence of 2 deleted: ", Llist)
+
+print(Llist.Lenght())
 
 index = 3
 print(f"Data at index {index}: ", Llist.get_data(index))
