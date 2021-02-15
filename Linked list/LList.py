@@ -123,6 +123,18 @@ class LinkList:
     def __repr__(self):
         return self.getString()
 
+    def __iter__(self):
+        self._curr_node = self._head
+        return self
+
+    def __next__(self):
+        if self._curr_node is not None:
+            data_node = self._curr_node.data
+            self._curr_node = self._curr_node.next
+            return data_node
+        else:
+            raise StopIteration
+
     def _check_node(self, node):
         if not isinstance(node, Node):
             raise ValueError("The introduced value is not a node")

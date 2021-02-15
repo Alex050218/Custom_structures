@@ -28,3 +28,7 @@ print(Llist.Lenght())
 
 index = 3
 print(f"Data at index {index}: ", Llist.get_data(index))
+
+print("Interating through the List:")
+for val in Llist:
+    print(f" {val}")
