@@ -13,3 +13,7 @@ print("Insertion at index 4: ", Llist)
 
 Llist.removeAt(0)
 print("First value deleted: ", Llist)
+
+old_index = 4
+Llist.removeAt(old_index)
+print(f"Deletion at index {old_index}:", Llist)

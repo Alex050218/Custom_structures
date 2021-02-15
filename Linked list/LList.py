@@ -47,13 +47,24 @@ class LinkList:
 
     def removeAt(self, index):
         self._check_index(index)
+        self._reduce_lenght()
 
         if index == 0:
             old_head = self._head
             self._head = old_head.next
-            
+
             del old_head
             return
+
+        old_node = self._head
+        for _ in range(index):
+            prev_node = old_node
+            old_node = old_node.next
+
+        if old_node.next is None:
+            prev_node.next = None
+        else:
+            prev_node.next = old_node.next
 
     def Lenght(self):
         return self._lenght
@@ -80,5 +91,9 @@ class LinkList:
             raise ValueError("The introduced value is not a node")
 
     def _check_index(self, new_index):
-        if not new_index >= 0 and new_index < self._lenght:
+        if not new_index >= 0 or not new_index < self._lenght:
             raise IndexError
+
+    def _reduce_lenght(self):
+        if self._lenght != 0:
+            self._lenght -= 1
