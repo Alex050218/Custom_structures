@@ -1,4 +1,4 @@
-Things and necessary things that will make this list work:
+hings and necessary things that will make this list work:
 
   Class node -> Piece of the linked list that will have the values
   that will be stored in the list. It has two properties:
@@ -33,7 +33,7 @@ Things and necessary things that will make this list work:
     Return false if not deleted, true otherwise.
 
     removeAt() -> Introduce an integer number and it will delete the node at
-    the specified index. Return true if found, false otherwise.
+    the specified index. Return true if found, false otherwise. CREATED
 
     getString() -> Return a representation of the list within a string. CREATED
 
