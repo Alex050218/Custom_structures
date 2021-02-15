@@ -69,6 +69,18 @@ class LinkList:
     def Lenght(self):
         return self._lenght
 
+    def get_index(self, search_node):
+        self._check_node(search_node)
+
+        curr_node = self._head
+        for index in range(self.Lenght()):
+            if search_node.data == curr_node.data:
+                return index
+
+            curr_node = curr_node.next
+
+        return -1
+
     def getString(self):
         string = ""
 
