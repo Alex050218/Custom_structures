@@ -10,6 +10,25 @@ class DoLList:
         self._lenght = 0
         self._head = None
 
+    def At_end(self, node):
+        self._check_DNode(node)
+
+        if self._lenght == 0:
+            self.At_beggining(node)
+            return
+
+        old_lastNode = self._head
+        while old_lastNode is not None:
+            if old_lastNode.next is not None:
+                old_lastNode = old_lastNode.next
+            else:
+                break
+
+        node.prev = old_lastNode
+        old_lastNode.next = node
+
+        self._lenght += 1
+
     def At_beggining(self, node):
         self._check_DNode(node)
         self._lenght += 1
