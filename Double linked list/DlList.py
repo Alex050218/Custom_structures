@@ -19,10 +19,10 @@ class DoLList:
 
         old_lastNode = self._head
         while old_lastNode is not None:
-            if old_lastNode.next is not None:
-                old_lastNode = old_lastNode.next
-            else:
+            if old_lastNode.next is None:
                 break
+
+            old_lastNode = old_lastNode.next
 
         node.prev = old_lastNode
         old_lastNode.next = node
