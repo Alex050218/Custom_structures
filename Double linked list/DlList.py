@@ -41,6 +41,16 @@ class DoLList:
             node.next = self._head
             self._head = node
 
+    def insert_at(self, index, node):
+        self._check_DNode(node)
+        self._check_index(index)
+
+        if index == 0:
+            self.At_beggining(node)
+            return
+
+        self._lenght += 1
+
     def get_str(self):
         list_str = ""
 
@@ -60,6 +70,10 @@ class DoLList:
 
     def __repr__(self):
         return self.get_str()
+
+    def _check_index(self, index):
+        if not index >= 0 or not index < self._lenght:
+            raise IndexError
 
     def _check_DNode(self, new_node):
         if not isinstance(new_node, DNode):
