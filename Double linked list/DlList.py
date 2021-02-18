@@ -12,6 +12,7 @@ class DoLList:
 
     def At_beggining(self, node):
         self._check_DNode(node)
+        self._lenght += 1
 
         if self._head is None:
             delattr(node, "prev")
@@ -24,6 +25,9 @@ class DoLList:
     def get_str(self):
         list_str = ""
 
+        if self._lenght == 0:
+            return "<Empty list>"
+
         curr_val = self._head
         while curr_val is not None:
             if curr_val.next is not None:
@@ -34,6 +38,9 @@ class DoLList:
             curr_val = curr_val.next
 
         return list_str
+
+    def __repr__(self):
+        return self.get_str()
 
     def _check_DNode(self, new_node):
         if not isinstance(new_node, DNode):
