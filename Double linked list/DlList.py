@@ -49,6 +49,14 @@ class DoLList:
             self.At_beggining(node)
             return
 
+        curr_val = self._head
+        for _ in range(index - 1):
+            curr_val = curr_val.next
+
+        node.prev = curr_val
+        node.next = curr_val.next
+        curr_val.next = node
+
         self._lenght += 1
 
     def get_str(self):
