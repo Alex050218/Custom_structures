@@ -66,6 +66,24 @@ class DoLList:
         self._head = next_val
         self._reduce_lenght()
 
+    def del_at(self, index):
+        self._check_index(index)
+
+        if index == 0:
+            self.del_first()
+            return
+
+        del_val = self._head
+        for search_index in range(index):
+            del_val = del_val.next
+
+        prev_val = del_val.prev
+        next_val = del_val.next
+
+        prev_val.next = next_val
+        next_val.prev = prev_val
+        self._reduce_lenght()
+
     def get_at(self, index):
         self._check_index(index)
 
