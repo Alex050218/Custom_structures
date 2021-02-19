@@ -59,6 +59,16 @@ class DoLList:
 
         self._lenght += 1
 
+    def get_at(self, index):
+        self._check_index(index)
+
+        curr_val = self._head
+        for curr_index in range(self._lenght):
+            if curr_index == index:
+                return curr_val.data
+
+            curr_val = curr_val.next
+
     def get_index(self, node):
         self._check_DNode(node)
 

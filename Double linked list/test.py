@@ -19,4 +19,7 @@ print(f"New value at index {search_index}: {Llist} \n")
 
 data = 8
 Node = DNode(data)
-print(f"Index of first instance of {data}: {Llist.get_index(Node)}")
+print(f"Index of first instance of {data}: {Llist.get_index(Node)} \n")
+
+index = 9
+print(f"Value at index {index}: {Llist.get_at(index)}")
