@@ -34,7 +34,6 @@ class DoLList:
         self._lenght += 1
 
         if self._head is None:
-            delattr(node, "prev")
             self._head = node
         else:
             setattr(self._head, "prev", node)
