@@ -15,4 +15,8 @@ print(f"New value at index 0: {Llist} \n")
 
 search_index = 8
 Llist.insert_at(search_index, DNode(-3))
-print(f"New value at index {search_index}: {Llist}")
+print(f"New value at index {search_index}: {Llist} \n")
+
+data = 8
+Node = DNode(data)
+print(f"Index of first instance of {data}: {Llist.get_index(Node)}")
