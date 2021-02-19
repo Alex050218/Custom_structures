@@ -84,6 +84,31 @@ class DoLList:
         next_val.prev = prev_val
         self._reduce_lenght()
 
+    def del_instance(self, node):
+        self._check_DNode(node)
+
+        if node.data == self._head.data:
+            self.del_first()
+            return
+
+        del_val = self._head
+        while del_val is not None:
+            if del_val.data == node.data:
+                break
+            del_val = del_val.next
+
+        if del_val is None:
+            return False
+
+        prev_val = del_val.prev
+        next_val = del_val.next
+
+        prev_val.next = next_val
+        next_val.prev = prev_val
+        self._reduce_lenght()
+
+        return True
+
     def get_at(self, index):
         self._check_index(index)
 

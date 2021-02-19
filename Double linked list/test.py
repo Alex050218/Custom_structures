@@ -31,4 +31,12 @@ print(f"First value deleted: {Llist} \n")
 
 del_index = 7
 Llist.del_at(del_index)
-print(f"Deleted value at index {del_index}: {Llist}")
+print(f"Deleted value at index {del_index}: {Llist} \n")
+
+del_data = 8
+deleted = Llist.del_instance(DNode(del_data))
+
+if deleted:
+    print(f"Deleted first instance of {del_data}: {Llist}")
+else:
+    print(f"The value {del_data} was not found in the list")
