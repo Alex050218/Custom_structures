@@ -150,6 +150,19 @@ class DoLList:
 
         return list_str
 
+    def __iter__(self):
+        self._curr_node = self._head
+        return self
+
+    def __next__(self):
+        if self._curr_node is not None:
+            return_node = self._curr_node
+            self._curr_node = self._curr_node.next
+            return return_node
+        else:
+            self._del_attributes()
+            raise StopIteration()
+
     def __repr__(self):
         return self.get_str()
 
@@ -164,3 +177,7 @@ class DoLList:
     def _reduce_lenght(self):
         if self._lenght != 0:
             self._lenght -= 1
+
+    def _del_attributes(self):
+        if hasattr(self, "_curr_node"):
+            delattr(self, "_curr_node")

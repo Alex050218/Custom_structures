@@ -37,6 +37,15 @@ del_data = 8
 deleted = Llist.del_instance(DNode(del_data))
 
 if deleted:
-    print(f"Deleted first instance of {del_data}: {Llist}")
+    print(f"Deleted first instance of {del_data}: {Llist} \n")
 else:
-    print(f"The value {del_data} was not found in the list")
+    print(f"The value {del_data} was not found in the list \n")
+
+print("Iterating trough the list:")
+iter_list = iter(Llist)
+
+first_val = next(iter_list)
+print(f"Next value: {first_val.data}")
+
+second_val = next(iter_list)
+print(f"Second value: {second_val.data}")
