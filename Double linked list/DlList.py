@@ -59,6 +59,13 @@ class DoLList:
 
         self._lenght += 1
 
+    def del_first(self):
+        next_val = self._head.next
+        delattr(next_val, "prev")
+
+        self._head = next_val
+        self._reduce_lenght()
+
     def get_at(self, index):
         self._check_index(index)
 
@@ -111,3 +118,7 @@ class DoLList:
     def _check_DNode(self, new_node):
         if not isinstance(new_node, DNode):
             raise TypeError
+
+    def _reduce_lenght(self):
+        if self._lenght != 0:
+            self._lenght -= 1

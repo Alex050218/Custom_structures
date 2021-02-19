@@ -25,3 +25,6 @@ index = 9
 print(f"Value at index {index}: {Llist.get_at(index)} \n")
 
 print(f"Current lenght of the list: {Llist.get_lenght()}")
+
+Llist.del_first()
+print(f"First value deleted: {Llist}")
