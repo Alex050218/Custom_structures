@@ -69,6 +69,9 @@ class DoLList:
 
             curr_val = curr_val.next
 
+    def get_lenght(self):
+        return self._lenght
+
     def get_index(self, node):
         self._check_DNode(node)
 

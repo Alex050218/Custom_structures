@@ -22,4 +22,6 @@ Node = DNode(data)
 print(f"Index of first instance of {data}: {Llist.get_index(Node)} \n")
 
 index = 9
-print(f"Value at index {index}: {Llist.get_at(index)}")
+print(f"Value at index {index}: {Llist.get_at(index)} \n")
+
+print(f"Current lenght of the list: {Llist.get_lenght()}")
