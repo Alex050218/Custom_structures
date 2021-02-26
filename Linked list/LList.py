@@ -18,25 +18,25 @@ class LinkList:
             self._head = new_head
             self._lenght += 1
 
-    def AtBeggining(self, NewNode):
+    def AtBeggining(self, NewNode: Node):
         self._check_node(NewNode)
         self._lenght += 1
 
         NewNode.next = self._head
         self._head = NewNode
 
-    def AtEnd(self, NewNode):
+    def AtEnd(self, NewNode: Node):
         self._check_node(NewNode)
         self._lenght += 1
 
-        curr_node = self._head
+        curr_node: Node = self._head
         while curr_node is not None:
             if curr_node.next is None:
                 curr_node.next = NewNode
                 break
             curr_node = curr_node.next
 
-    def InsertAt(self, index, NewNode):
+    def InsertAt(self, index: int, NewNode: Node):
         self._check_node(NewNode)
         self._check_index(index)
 
@@ -46,8 +46,8 @@ class LinkList:
 
         curr_node = self._head
         for _ in range(index):
-            prev_node = curr_node
-            curr_node = curr_node.next
+            prev_node: Node = curr_node
+            curr_node: Any = curr_node.next
 
         NewNode.next = curr_node
         prev_node.next = NewNode
