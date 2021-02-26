@@ -1,4 +1,5 @@
 from typing import Any
+from __future__ import annotations
 
 
 class Node:
@@ -143,14 +144,14 @@ class LinkList:
 
         return string
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return self.getString()
 
-    def __iter__(self):
+    def __iter__(self) -> LinkList:
         self._curr_node = self._head
         return self
 
-    def __next__(self):
+    def __next__(self) -> Any:
         if self._curr_node is not None:
             data_node = self._curr_node.data
             self._curr_node = self._curr_node.next
