@@ -58,8 +58,8 @@ class LinkList:
         self._check_index(index)
 
         if index == 0:
-            self.remove_first()
-            return
+            old_data = self.remove_first()
+            return old_data
 
         old_node = self._head
         for _ in range(index):
@@ -78,8 +78,8 @@ class LinkList:
         self._check_node(node)
 
         if node.data == self._head.data:
-            self.remove_first()
-            return
+            old_data = self.remove_first()
+            return old_data
 
         old_node = self._head
         while old_node is not None:
@@ -97,12 +97,12 @@ class LinkList:
         self._reduce_lenght()
         return old_node.data
 
-    def remove_first(self):
+    def remove_first(self) -> Any:
         self._reduce_lenght()
-        old_head = self._head
+        old_head: Node = self._head
         self._head = old_head.next
 
-        del old_head
+        return old_head.data
 
     def Lenght(self):
         return self._lenght
