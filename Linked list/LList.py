@@ -77,20 +77,20 @@ class LinkList:
             self.remove_first()
             return
 
-            old_node = self._head
-            while old_node is not None:
-                prev_node = old_node
-                old_node = old_node.next
+        old_node = self._head
+        while old_node is not None:
+            prev_node = old_node
+            old_node = old_node.next
 
-                if old_node.data == node.data:
-                    break
+            if old_node.data == node.data:
+                break
 
-            if old_node.next is None:
-                prev_node.next = None
-            else:
-                prev_node.next = old_node.next
+        if old_node.next is None:
+            prev_node.next = None
+        else:
+            prev_node.next = old_node.next
 
-            self._reduce_lenght()
+        self._reduce_lenght()
 
     def remove_first(self):
         self._reduce_lenght()
