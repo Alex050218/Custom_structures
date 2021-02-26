@@ -54,7 +54,7 @@ class LinkList:
 
         self._lenght += 1
 
-    def removeAt(self, index):
+    def removeAt(self, index: int) -> Any:
         self._check_index(index)
 
         if index == 0:
@@ -72,6 +72,7 @@ class LinkList:
             prev_node.next = old_node.next
 
         self._reduce_lenght()
+        return old_node.data
 
     def remove_node(self, node):
         self._check_node(node)
