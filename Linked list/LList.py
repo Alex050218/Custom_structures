@@ -74,7 +74,7 @@ class LinkList:
         self._reduce_lenght()
         return old_node.data
 
-    def remove_node(self, node):
+    def remove_node(self, node: Node) -> Any:
         self._check_node(node)
 
         if node.data == self._head.data:
@@ -95,6 +95,7 @@ class LinkList:
             prev_node.next = old_node.next
 
         self._reduce_lenght()
+        return old_node.data
 
     def remove_first(self):
         self._reduce_lenght()
