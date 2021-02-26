@@ -8,12 +8,12 @@ class Node:
 
 
 class LinkList:
-    _lenght = 0
-    _head = None
-    _curr_node = None
+    _lenght: int = 0
+    _head: Node
+    _curr_node: Node
 
-    def __init__(self, new_head=None):
-        if new_head is not None:
+    def __init__(self, new_head: Node):
+        if new_head:
             self._check_node(new_head)
             self._head = new_head
             self._lenght += 1
