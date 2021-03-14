@@ -11,3 +11,6 @@ class StackS(LinkList):
             self._head = new_head
         else:
             self._head = Node()
+
+    def push(self, new_node: Node):
+        self.InsertAt(0,new_node)
