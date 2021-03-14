@@ -3,7 +3,7 @@ from typing import Any
 
 
 class Node:
-    def __init__(self, data: Any):
+    def __init__(self, data: Any | None = None):
         self.data: Any = data
         self.next: Any = None
 
