@@ -9,7 +9,7 @@ practice code that will make me proud someday.
 
 setup(
     name="Structures",
-    version="1.0",
+    version="1.4",
     author="Alex050218",
     url="https://github.com/Alex050218/Custom_structures",
     author_email="alejandrovalenzuela051@gmail.com",
