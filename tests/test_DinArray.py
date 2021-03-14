@@ -1,4 +1,4 @@
-from DinArray import DinamicArray
+from Structures.DinArray import DinamicArray
 
 
 def status_array(ar):

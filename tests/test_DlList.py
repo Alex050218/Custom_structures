@@ -1,4 +1,4 @@
-from DlList import DNode, DoLList
+from Structures.DlList import DNode, DoLList
 
 Llist = DoLList()
 

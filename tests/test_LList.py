@@ -1,4 +1,4 @@
-from LList import LinkList, Node
+from Structures.LList import LinkList, Node
 
 Llist = LinkList(Node(6))
 
