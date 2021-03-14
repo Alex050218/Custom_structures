@@ -13,7 +13,7 @@ class LinkList:
     _head: Node
     _curr_node: Node
 
-    def __init__(self, new_head: Node):
+    def __init__(self, new_head: Node = None):
         if new_head:
             self._check_node(new_head)
             self._head = new_head
