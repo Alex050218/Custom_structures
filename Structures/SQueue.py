@@ -13,5 +13,5 @@ class Queue:
             self._head = new_node
             self._tail = new_node
 
-        new_node.next = self._tail
+        self._tail.next = new_node
         self._tail = new_node
