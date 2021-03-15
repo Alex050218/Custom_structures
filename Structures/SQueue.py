@@ -1,3 +1,4 @@
+from __future__ import annotations
 from Structures.LList import Node
 
 
@@ -15,3 +16,9 @@ class Queue:
 
         self._tail.next = new_node
         self._tail = new_node
+
+    def is_empty(self) -> bool:
+        return self._length == 0
+
+    def lenght(self):
+        return self._length
