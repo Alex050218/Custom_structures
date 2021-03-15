@@ -22,3 +22,17 @@ class Queue:
 
     def lenght(self):
         return self._length
+
+    def get_str(self) -> str:
+        str_queue: str = ""
+
+        cur_node = self._head
+        while cur_node is not None:
+            if cur_node.next is None:
+                str_queue += f"{cur_node.data}"
+            else:
+                str_queue += f"{cur_node.data} -> "
+
+            cur_node = cur_node.next
+
+        return str_queue
