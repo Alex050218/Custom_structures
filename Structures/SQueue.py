@@ -8,6 +8,7 @@ class Queue:
         self._length = 0
 
     def enque(self, new_node: Node):
+        self._length += 1
         if self._head is None:
             self._head = new_node
             self._tail = new_node
