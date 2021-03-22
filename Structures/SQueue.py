@@ -51,3 +51,15 @@ class Queue:
             cur_node = cur_node.next
 
         return str_queue
+
+    def __iter__(self):
+        self.__curr_node = self._head
+        return self
+
+    def __next__(self) -> Any:
+        if self.__curr_node is not None:
+            data_node: Any = self.__curr_node.data
+            self.__curr_node = self.__curr_node.next
+            return data_node
+        else:
+            raise StopIteration

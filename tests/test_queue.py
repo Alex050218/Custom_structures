@@ -8,6 +8,11 @@ for num in range(10):
 print(f"New queue: {test_queue.get_str()}")
 print(f"Current length: {test_queue.lenght()}")
 
+print("Iterating through the queue:")
+for val in test_queue:
+    print(val, end=" ")
+print("\n")
+
 removed_val: int = test_queue.deque()
 
 while removed_val is not None:
