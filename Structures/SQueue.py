@@ -1,4 +1,5 @@
 from __future__ import annotations
+from typing import Any
 from Structures.LList import Node
 
 
@@ -19,6 +20,17 @@ class Queue:
 
     def is_empty(self) -> bool:
         return self._length == 0
+    
+    def deque(self) -> Any:
+        if self.is_empty():
+            return None
+
+        deleted_val: Any = self._head.data
+        next_node: Node = self._head.next
+
+        self._head = next_node
+        self._length -= 1
+        return deleted_val
 
     def lenght(self):
         return self._length

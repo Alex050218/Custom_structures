@@ -7,3 +7,12 @@ for num in range(10):
 
 print(f"New queue: {test_queue.get_str()}")
 print(f"Current length: {test_queue.lenght()}")
+
+removed_val: int = test_queue.deque()
+
+while removed_val is not None:
+    print(f"Queue after deque: {test_queue.get_str()}")
+    print(f"Removed value: {removed_val}")
+    print(f"New lenght: {test_queue.lenght()} \n")
+
+    removed_val = test_queue.deque()
