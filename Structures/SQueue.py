@@ -36,6 +36,9 @@ class Queue:
         return self._length
 
     def get_str(self) -> str:
+        if self.is_empty():
+            return "<Empty list>"
+
         str_queue: str = ""
 
         cur_node = self._head
